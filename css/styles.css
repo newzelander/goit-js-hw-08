@@ -1,0 +1,38 @@
+* {
+  box-sizing: border-box;
+}
+ul {
+  list-style: none;
+  padding: 0;
+}
+ul.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 24px;
+  row-gap: 24px;
+  max-width: 1128px;
+  margin: 0 auto;
+}
+.gallery-item {
+  flex: 1 1 calc((100% - 48px) / 3);
+  height: 208px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.gallery-image {
+  width: 360px;
+  height: 200px;
+  display: block;
+  object-fit: cover;
+  transition:
+    width 0.3s ease,
+    height 0.3s ease;
+}
+
+.gallery-item:hover .gallery-image {
+  width: 376px;
+  height: 208px;
+}
